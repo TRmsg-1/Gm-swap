@@ -71,6 +71,7 @@ export default function useCatchTxError(): CatchTxErrorReturn {
 
         return receipt
       } catch (error: any) {
+        console.log({ error })
         if (!isUserRejected(error)) {
           if (!tx) {
             handleNormalError(error)
