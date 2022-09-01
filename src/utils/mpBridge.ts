@@ -35,11 +35,13 @@ const postMessage = ({ action, payload, cb }: { action: string; payload?: any; c
 function getWeb3Provider() {
   return {
     on(event: string, cb: () => void) {
+      console.info('mp-on', event)
       postMessage({ action: 'on', payload: { event } })
       onCallbackIdList[event] = cb
     },
     request(params) {
       return new Promise((resolve, reject) => {
+        console.info('mp-request', params)
         postMessage({
           action: 'request',
           payload: params,
