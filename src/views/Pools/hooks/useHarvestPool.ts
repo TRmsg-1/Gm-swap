@@ -10,6 +10,7 @@ const options = {
 
 const harvestPool = async (sousChefContract) => {
   const gasPrice = getGasPrice()
+  console.log({ gasPrice, sousChefContract })
   return sousChefContract.deposit('0', { ...options, gasPrice })
 }
 
