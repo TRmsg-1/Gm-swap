@@ -1,6 +1,5 @@
 {
   "$schema": "https://turborepo.org/schema.json",
-  "baseBranch": "origin/develop",
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
@@ -14,14 +13,25 @@
       "outputs": []
     },
     "dev": {
+      "cache": false,
+      "dependsOn": ["^build"]
+    },
+    "start": {
       "cache": false
     },
     "build:list": {
       "outputs": ["list/**"]
     },
     "integration-test": {
-      "outputs": [],
-      "inputs": ["cypress/integration/**.test.ts"]
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "clean": {
+      "cache": false
+    },
+    "postinstall": {
+      "inputs": ["src/config/abi/**"],
+      "outputs": ["src/config/abi/types/**"]
     }
   }
 }
