@@ -1,7 +1,7 @@
 ---
-name: Something Else
+name: gmswap
 about: Tell us something else
-title: ''
+title: ''gmswap
 labels: ''
 assignees: ''
 ---
