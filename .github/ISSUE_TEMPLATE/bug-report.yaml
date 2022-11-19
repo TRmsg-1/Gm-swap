@@ -1,6 +1,6 @@
 name: 🐞 Bug Report
 description: File a bug/issue
-title: '[BUG] <title>'
+title: '[BUG] <gmswap>'
 labels: [Bug, Triage]
 assignees:
   - Chef-Cheems
