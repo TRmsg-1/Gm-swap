@@ -41,7 +41,6 @@ const SubMenu = styled.div<{ isOpen: boolean }>`
   `}
 `
 
-const AddressLink = styled(Text)`
   cursor: pointer;
   overflow-wrap: break-word;
   font-weight: bold;
